@@ -42,10 +42,15 @@ public class PlayerController : MonoBehaviour
             transform.position -= transform.TransformDirection(Vector3.left) * Time.deltaTime * movementSpeed;
         }
 
-        if(Input.GetKey("space") && isGrounded)
+        if (Input.GetKey("space") && isGrounded)
         {
             rb.AddForce(jump * jumpForce *Time.deltaTime, ForceMode.Impulse);
             isGrounded = false;
+        }
+
+        if (transform.position.y <= -15)
+        {
+            transform.position = new Vector3(0.0f, 15.0f, 0.0f);
         }
     }
 
