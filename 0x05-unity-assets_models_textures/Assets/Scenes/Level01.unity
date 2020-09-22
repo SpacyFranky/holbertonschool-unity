@@ -980,6 +980,12 @@ MonoBehaviour:
   jump: {x: 0, y: 0, z: 0}
   jumpForce: 70
   isGrounded: 1
+--- !u!4 &392393702 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 737281653019701171, guid: 7cd2e80d1cb65b845943cfedf3455db9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3148219188702361835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &392393703
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -994,7 +1000,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &639822441
 GameObject:
@@ -2960,6 +2966,7 @@ GameObject:
   - component: {fileID: 2002998552}
   - component: {fileID: 2002998551}
   - component: {fileID: 2002998550}
+  - component: {fileID: 2002998553}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3032,6 +3039,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
+--- !u!114 &2002998553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002998549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6509964bfa39d744bcf38555cc51109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 392393702}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: 0, z: -3.73}
 --- !u!1 &2073069113
 GameObject:
   m_ObjectHideFlags: 0
