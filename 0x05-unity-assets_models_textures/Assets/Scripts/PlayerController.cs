@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         if (transform.position.y <= -15)
         {
-            transform.position = new Vector3(0.0f, 15.0f, 0.0f);
+            transform.position = new Vector3(0.0f, 30.0f, 0.0f);
         }
     }
 
