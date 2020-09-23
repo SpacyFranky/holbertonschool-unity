@@ -15,3 +15,12 @@
 # Assets Used
 * [Skyboxes: Farland Skies - Cloudy Crown](https://assetstore.unity.com/packages/2d/textures-materials/sky/farland-skies-cloudy-crown-60004)
 * [Models: Kenney's Nature Pack Extended](https://kenney.nl/assets/nature-pack-extended)
+# How to play
+- WASD to move and look around with the mouse<br>
+- Space bar to jump<br>
+- Shift button with W to boost<br>
+# Bugs
+- Camera starts shaking when the player makes a big jump then hit another object
+- Player can make big jumps when holding the space bar near a ledge after a jump
+# Note
+This is a primitive build, but with the right tutorials the bugs above will be fixed.
