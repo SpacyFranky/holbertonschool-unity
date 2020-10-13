@@ -4,27 +4,49 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float RotationSpeed = 1;
-    public Transform Target, Player;
-    float mouseX, mouseY;
+    public Transform target;
+    public Vector3 offset;
+    public bool useOffsetValues;
+    public float rotateSpeed;
+    public Transform pivot;
+    public float maxViewAngle;
+    public float minViewAngle;
 
-    // Start is called before the first frame update
     void Start()
-	{
-		Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-	}
+    {
+        if (!useOffsetValues)
+            offset = target.position - transform.position;
 
-    // Update is called once per frame
+        pivot.transform.position = target.transform.position;
+        pivot.transform.parent = target.transform;
+
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+
     void LateUpdate()
     {
-        mouseX += Input.GetAxis("Mouse X") * RotationSpeed;
-        mouseY -= Input.GetAxis("Mouse Y") * RotationSpeed;
-        mouseY = Mathf.Clamp(mouseY, -35, 60);
+        float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
+        target.Rotate(0, horizontal, 0);
 
-        transform.LookAt(Target);
+        float vertical = Input.GetAxis("Mouse Y") * rotateSpeed;
+        pivot.Rotate(-vertical, 0, 0);
 
-        Target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-        Player.rotation = Quaternion.Euler(0, mouseX, 0);
+        //Limit up/down camera rotation
+        if (pivot.rotation.eulerAngles.x > maxViewAngle && pivot.rotation.eulerAngles.x < 180f)
+            pivot.rotation = Quaternion.Euler(maxViewAngle, 0, 0);
+        if (pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < 360f + minViewAngle)
+            pivot.rotation = Quaternion.Euler(360f + minViewAngle, 0, 0);
+
+        float desiredYAngle = target.eulerAngles.y;
+        float desiredXAngle = pivot.eulerAngles.x;
+
+        Quaternion rotation = Quaternion.Euler(desiredXAngle, desiredYAngle, 0);
+        transform.position = target.position - (rotation * offset);
+
+        if (transform.position.y < target.position.y)
+            transform.position = new Vector3(transform.position.x, target.position.y, transform.position.z);
+
+        transform.LookAt(target);
     }
 }
