@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class OptionsMenu : MonoBehaviour
-{
+{   
     // Loads the previous scene
     public void Back()
     {

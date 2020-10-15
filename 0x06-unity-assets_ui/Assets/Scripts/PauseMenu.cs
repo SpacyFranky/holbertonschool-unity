@@ -8,6 +8,11 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject player;
+    private Vector3 startingPoint;
+    public void Start()
+    {
+        startingPoint = player.transform.position;
+    }
 
     // Update is called once per frame
     public void Update()
@@ -25,7 +30,6 @@ public class PauseMenu : MonoBehaviour
     // Pauses the game by activating PauseCanvas and stopping the timer
     public void Pause()
     {
-        
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -48,5 +52,17 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
+    }
+
+    // Loads the MainMenu scene
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    // Loads the Options scene
+    public void Options()
+    {
+        SceneManager.LoadScene("Options");
     }
 }

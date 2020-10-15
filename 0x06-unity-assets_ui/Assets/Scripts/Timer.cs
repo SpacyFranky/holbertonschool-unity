@@ -8,11 +8,18 @@ public class Timer : MonoBehaviour
 
     public Text timerText;
     private float time;
+    private Vector3 startingPoint;
+
+    void Start()
+    {
+        startingPoint = transform.position;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
+        if (transform.position != startingPoint)
+            time += Time.deltaTime;
 
         var minutes = time / 60;
         var seconds = time % 60;
