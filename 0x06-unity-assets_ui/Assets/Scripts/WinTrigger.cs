@@ -7,23 +7,17 @@ public class WinTrigger : MonoBehaviour
 {
     public GameObject player;
     public Text timerText;
+    public GameObject winCanvas;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void OnTriggerEnter(Collider other)
     {
-        player.GetComponent<Timer>().enabled = false;
-        timerText.color = new Color(0, 255, 0);
-        timerText.fontSize = 90;
+        /*timerText.color = new Color(0, 255, 0);
+        timerText.fontSize = 90;*/
+        timerText.enabled = false;
+        winCanvas.SetActive(true);
+        Time.timeScale = 0;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }

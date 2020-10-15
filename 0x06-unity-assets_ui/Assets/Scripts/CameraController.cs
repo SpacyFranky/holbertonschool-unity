@@ -40,12 +40,14 @@ public class CameraController : MonoBehaviour
 
         // Setting vertical axis from mouse input
         float vertical = Input.GetAxis("Mouse Y") * rotateSpeed;
+        
         // Checks toggle isInverted
         int yAxis = PlayerPrefs.GetInt("IsInverted");
         if (yAxis == 0)
             pivot.Rotate(-vertical, 0, 0);
         else
             pivot.Rotate(vertical, 0, 0);
+        
         PlayerPrefs.Save();
         //Limit up/down camera rotation
         if (pivot.rotation.eulerAngles.x > maxViewAngle && pivot.rotation.eulerAngles.x < 180f)
