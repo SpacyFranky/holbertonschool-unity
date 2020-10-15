@@ -8,11 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject player;
-    private Vector3 startingPoint;
-    public void Start()
-    {
-        startingPoint = player.transform.position;
-    }
+
 
     // Update is called once per frame
     public void Update()

@@ -14880,6 +14880,7 @@ MonoBehaviour:
   pivot: {fileID: 277183473}
   maxViewAngle: 60
   minViewAngle: -60
+  isInverted: 0
 --- !u!1001 &2003747095
 PrefabInstance:
   m_ObjectHideFlags: 0

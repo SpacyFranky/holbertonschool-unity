@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: ceb0a3ed2cb53a94fa21843cc958c52b, type: 2}
   m_HaloStrength: 0.5
@@ -970,6 +970,7 @@ MonoBehaviour:
   pivot: {fileID: 206528160}
   maxViewAngle: 60
   minViewAngle: -60
+  isInverted: 0
 --- !u!1001 &1284603716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1042,10 +1043,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0239e14d46241d24fb3a02b200e20319, type: 2}
+    - target: {fileID: -4002239815115787907, guid: d727e9a788f048b4aa2ccead087fc9d3,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d727e9a788f048b4aa2ccead087fc9d3,
         type: 3}
       propertyPath: m_Name
       value: Flag
+      objectReference: {fileID: 0}
+    - target: {fileID: 7991113125823017423, guid: d727e9a788f048b4aa2ccead087fc9d3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d727e9a788f048b4aa2ccead087fc9d3, type: 3}

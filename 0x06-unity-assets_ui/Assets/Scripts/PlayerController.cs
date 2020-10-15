@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         player.Move(moveDirection * Time.deltaTime);
 
         // Resets from the start line when player falls
-        if (transform.position.y <= -20f)
+        if (transform.position.y <= -30.0f)
         {
             transform.position = new Vector3(0.0f, 30.0f, 0.0f);
         }
