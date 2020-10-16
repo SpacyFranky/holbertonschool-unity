@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     
     private Vector3 moveDirection;
     public float gravityScale;
-    public bool isGrounded;
 
     void Start()
     {
