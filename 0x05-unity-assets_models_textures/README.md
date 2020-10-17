@@ -18,9 +18,10 @@
 # How to play
 - WASD to move and look around with the mouse<br>
 - Space bar to jump<br>
-- Shift button with W to boost<br>
 # Bugs
-- Camera starts shaking when the player makes a big jump then hit another object
-- Player can make big jumps when holding the space bar near a ledge after a jump
+- Camera starts shaking when the player makes a big jump then hit another object (FIXED)
+- Player can make big jumps when holding the space bar near a ledge after a jump (FIXED)
 # Note
 This is a primitive build, but with the right tutorials the bugs above will be fixed.
+# Update
+All bugs are fixed.
