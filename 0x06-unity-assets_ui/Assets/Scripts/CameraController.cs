@@ -25,6 +25,7 @@ public class CameraController : MonoBehaviour
 
         // Hide cursor when ingame
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
 
