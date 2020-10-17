@@ -6,4 +6,4 @@
 - WASD to move and look around with the mouse<br>
 - Space bar to jump<br>
 # Update
-```Level03``` is still not finished. It will be finished in a few days.
+```Level03``` is still not yet done. It will be finished in a few days.
