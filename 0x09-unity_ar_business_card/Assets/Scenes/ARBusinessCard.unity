@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 310773086}
   - component: {fileID: 310773088}
   - component: {fileID: 310773087}
+  - component: {fileID: 310773089}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -362,6 +363,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310773085}
   m_CullTransparentMesh: 0
+--- !u!95 &310773089
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310773085}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 919d92ae6908458418bf0c448aad73f1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &341142489
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +564,7 @@ GameObject:
   - component: {fileID: 765238452}
   - component: {fileID: 765238451}
   - component: {fileID: 765238450}
+  - component: {fileID: 765238453}
   m_Layer: 5
   m_Name: GitHubButton
   m_TagString: Untagged
@@ -613,7 +634,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 765238451}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 765238453}
+        m_MethodName: Open
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &765238451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,6 +683,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765238448}
   m_CullTransparentMesh: 0
+--- !u!114 &765238453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765238448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1416bcc24100014298481811ff2fc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: https://github.com/SpacyFranky
 --- !u!1 &925126510
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +708,7 @@ GameObject:
   - component: {fileID: 925126514}
   - component: {fileID: 925126513}
   - component: {fileID: 925126512}
+  - component: {fileID: 925126515}
   m_Layer: 5
   m_Name: LinkedinButton
   m_TagString: Untagged
@@ -732,7 +778,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 925126513}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 925126515}
+        m_MethodName: Open
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &925126513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -770,6 +827,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925126510}
   m_CullTransparentMesh: 0
+--- !u!114 &925126515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925126510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1416bcc24100014298481811ff2fc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: https://www.linkedin.com/in/aziz-ayed-20a462192/
 --- !u!1 &1009444821
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,6 +852,7 @@ GameObject:
   - component: {fileID: 1009444825}
   - component: {fileID: 1009444824}
   - component: {fileID: 1009444823}
+  - component: {fileID: 1009444826}
   m_Layer: 5
   m_Name: InstagramButton
   m_TagString: Untagged
@@ -851,7 +922,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1009444824}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1009444826}
+        m_MethodName: Open
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1009444824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,6 +971,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009444821}
   m_CullTransparentMesh: 0
+--- !u!114 &1009444826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009444821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1416bcc24100014298481811ff2fc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: https://www.instagram.com/spaciousfronk/
 --- !u!1 &1122637263
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +995,7 @@ GameObject:
   - component: {fileID: 1122637264}
   - component: {fileID: 1122637266}
   - component: {fileID: 1122637265}
+  - component: {fileID: 1122637267}
   m_Layer: 5
   m_Name: JobTitle
   m_TagString: Untagged
@@ -967,6 +1063,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122637263}
   m_CullTransparentMesh: 0
+--- !u!95 &1122637267
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122637263}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ae9d251e493c1dd4eb3cd6419f0dfbad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1168959000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1330,34 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!21 &1537816502
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'cardMaterial
+
+    13944'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: acb2d5544db240419d254d73dd8f2b87, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1592581440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1637,7 @@ GameObject:
   - component: {fileID: 1908705383}
   - component: {fileID: 1908705382}
   - component: {fileID: 1908705381}
+  - component: {fileID: 1908705384}
   m_Layer: 5
   m_Name: TwitterButton
   m_TagString: Untagged
@@ -1563,7 +1707,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1908705382}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1908705384}
+        m_MethodName: Open
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1908705382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1601,6 +1756,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908705379}
   m_CullTransparentMesh: 0
+--- !u!114 &1908705384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908705379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1416bcc24100014298481811ff2fc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: https://twitter.com/SpaciousFrank
 --- !u!1 &1953295396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,7 +1816,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2003811715}
+  - {fileID: 1537816502}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1735,31 +1903,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &2003811715
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'cardMaterial
-
-    -11030'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: acb2d5544db240419d254d73dd8f2b87, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
