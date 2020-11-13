@@ -21,7 +21,9 @@ public class CameraController : MonoBehaviour
 
         // Setting pivot position with target position
         pivot.transform.position = target.transform.position;
-        pivot.transform.parent = target.transform;
+        //pivot.transform.parent = target.transform;
+        pivot.transform.parent = null;
+        pivot.parent = null;
 
         // Hide cursor when ingame
         Cursor.lockState = CursorLockMode.Locked;
@@ -35,9 +37,13 @@ public class CameraController : MonoBehaviour
         if (Time.deltaTime == 0)
             return;
 
+        
+        pivot.transform.position = target.transform.position;
+        
+        
         // Setting horizontal axis from mouse input
         float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
-        target.Rotate(0, horizontal, 0);
+        pivot.Rotate(0, horizontal, 0);
 
         // Setting vertical axis from mouse input
         float vertical = Input.GetAxis("Mouse Y") * rotateSpeed;
@@ -52,11 +58,11 @@ public class CameraController : MonoBehaviour
         PlayerPrefs.Save();
         //Limit up/down camera rotation
         if (pivot.rotation.eulerAngles.x > maxViewAngle && pivot.rotation.eulerAngles.x < 180f)
-            pivot.rotation = Quaternion.Euler(maxViewAngle, 0, 0);
+            pivot.rotation = Quaternion.Euler(maxViewAngle, pivot.eulerAngles.y, 0.0f);
         if (pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < 360f + minViewAngle)
-            pivot.rotation = Quaternion.Euler(360f + minViewAngle, 0, 0);
+            pivot.rotation = Quaternion.Euler(360f + minViewAngle, pivot.eulerAngles.y, 0.0f);
 
-        float desiredYAngle = target.eulerAngles.y;
+        float desiredYAngle = pivot.eulerAngles.y;
         float desiredXAngle = pivot.eulerAngles.x;
 
         Quaternion rotation = Quaternion.Euler(desiredXAngle, desiredYAngle, 0);
