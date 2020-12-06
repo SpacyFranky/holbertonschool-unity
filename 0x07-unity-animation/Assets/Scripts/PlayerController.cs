@@ -16,9 +16,15 @@ public class PlayerController : MonoBehaviour
 
     public GameObject playerModel;
 
+
+    //public CharacterController controller;
+    public Animator anim;
+
+
     void Start()
     {
         player = GetComponent<CharacterController>();
+
     }
 
     void Update()
@@ -29,7 +35,7 @@ public class PlayerController : MonoBehaviour
         moveDirection = Vector3.ClampMagnitude(moveDirection, 1) * moveSpeed;
         moveDirection.y = yStore;
         
-        // Checks if player can jump on the ground or not in the air
+        // Making the player able to jump only on the ground
         if (player.isGrounded)
         {
             moveDirection.y = 0f;
@@ -56,5 +62,9 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(0.0f, 30.0f, 0.0f);
         }
+
+
+        anim.SetBool("isGrounded", player.isGrounded);
+        anim.SetFloat("speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
     }
 }

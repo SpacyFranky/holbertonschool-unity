@@ -3449,18 +3449,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3148219188702361835}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &454833413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!95 &454833414 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8852437520298494961, guid: 7cd2e80d1cb65b845943cfedf3455db9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3148219188702361835}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454833412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37a7b585b9321634c9acbae09c98fccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &459511623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16577,13 +16571,29 @@ PrefabInstance:
       propertyPath: playerModel
       value: 
       objectReference: {fileID: 454833412}
+    - target: {fileID: 139897487, guid: 7cd2e80d1cb65b845943cfedf3455db9, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 454833414}
+    - target: {fileID: 139897487, guid: 7cd2e80d1cb65b845943cfedf3455db9, type: 3}
+      propertyPath: jumpForce
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 139897488, guid: 7cd2e80d1cb65b845943cfedf3455db9, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 139897488, guid: 7cd2e80d1cb65b845943cfedf3455db9, type: 3}
       propertyPath: m_Center.y
-      value: 0.1
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 139897488, guid: 7cd2e80d1cb65b845943cfedf3455db9, type: 3}
+      propertyPath: m_SkinWidth
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 139897488, guid: 7cd2e80d1cb65b845943cfedf3455db9, type: 3}
+      propertyPath: m_Height
+      value: 2.15
       objectReference: {fileID: 0}
     - target: {fileID: 139897489, guid: 7cd2e80d1cb65b845943cfedf3455db9, type: 3}
       propertyPath: timerText
@@ -16661,12 +16671,12 @@ PrefabInstance:
     - target: {fileID: 3186861684631703947, guid: 7cd2e80d1cb65b845943cfedf3455db9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.974
+      value: -0.93
       objectReference: {fileID: 0}
     - target: {fileID: 3186861684631703947, guid: 7cd2e80d1cb65b845943cfedf3455db9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.074
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3291078187828898653, guid: 7cd2e80d1cb65b845943cfedf3455db9,
         type: 3}
@@ -16683,6 +16693,26 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: cc24c230423bf3a428030c4c1d239a9e, type: 2}
+    - target: {fileID: 8852437520298494961, guid: 7cd2e80d1cb65b845943cfedf3455db9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852437520298494961, guid: 7cd2e80d1cb65b845943cfedf3455db9,
+        type: 3}
+      propertyPath: m_CullingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852437520298494961, guid: 7cd2e80d1cb65b845943cfedf3455db9,
+        type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852437520298494961, guid: 7cd2e80d1cb65b845943cfedf3455db9,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd2e80d1cb65b845943cfedf3455db9, type: 3}
 --- !u!1001 &4857212798590049349

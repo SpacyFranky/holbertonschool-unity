@@ -18,7 +18,7 @@ public class CutsceneController : MonoBehaviour
 
     void Update()
     {
-        if (isAnimationStatePlaying(anim, 0, "Intro01") == true && Input.GetKeyDown("space"))
+        if (isAnimationStatePlaying(anim, 0, "Intro01") == true && Input.GetKeyDown("return"))
         {
             player.GetComponent<PlayerController>().enabled = true;
             mainCamera.SetActive(true);
