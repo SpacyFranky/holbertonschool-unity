@@ -67,5 +67,6 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isGrounded", player.isGrounded);
         anim.SetFloat("speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
         anim.SetFloat("fallingLevel", transform.position.y);
+        anim.SetBool("impact", player.isGrounded);
     }
 }
