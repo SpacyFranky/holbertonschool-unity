@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Resets from the start line when player falls
-        if (transform.position.y <= -30.0f)
+        if (transform.position.y <= -60.0f)
         {
             transform.position = new Vector3(0.0f, 30.0f, 0.0f);
         }
@@ -66,5 +66,6 @@ public class PlayerController : MonoBehaviour
 
         anim.SetBool("isGrounded", player.isGrounded);
         anim.SetFloat("speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
+        anim.SetFloat("fallingLevel", transform.position.y);
     }
 }
