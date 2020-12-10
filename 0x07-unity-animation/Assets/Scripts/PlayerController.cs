@@ -45,16 +45,25 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Applying move direction to player
-        moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
-        player.Move(moveDirection * Time.deltaTime);
-
-        // Move the player in different directions based on camera look direction
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Falling Flat Impact") ||
+          anim.GetCurrentAnimatorStateInfo(0).IsName("Getting Up"))
+            player.enabled = false;
+        else
         {
-            transform.rotation = Quaternion.Euler(0f, pivot.rotation.eulerAngles.y, 0f);
-            Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
-            playerModel.transform.rotation = Quaternion.Slerp(playerModel.transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
+            player.enabled = true;
+            // Applying move direction to player
+            moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
+        
+            player.Move(moveDirection * Time.deltaTime);
+
+            // Move the player in different directions based on camera look direction
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            {
+                transform.rotation = Quaternion.Euler(0f, pivot.rotation.eulerAngles.y, 0f);
+                Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
+                playerModel.transform.rotation = Quaternion.Slerp(playerModel.transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
+            }
         }
 
         // Resets from the start line when player falls
@@ -62,7 +71,6 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(0.0f, 30.0f, 0.0f);
         }
-
 
         anim.SetBool("isGrounded", player.isGrounded);
         anim.SetFloat("speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
