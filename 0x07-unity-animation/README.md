@@ -10,8 +10,9 @@
 # How to play
 - WASD to move and look around with the mouse<br>
 - Space bar to jump<br>
+- Press Enter to skip cutscenes
 # New Features
 - New User Interface
 - Three different levels
 # Note
-- ```Level03``` is still not yet done. It will be finished in a few days.
+- ```Level03``` is still not yet done. The level design will be done soon.
