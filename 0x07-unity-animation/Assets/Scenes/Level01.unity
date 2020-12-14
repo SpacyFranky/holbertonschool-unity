@@ -14156,7 +14156,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: 4300000, guid: 7e1f28ae88641364ea73b07b4c7dcfe6, type: 3}
 --- !u!4 &1946825367 stripped
 Transform:
@@ -16458,7 +16458,7 @@ PrefabInstance:
     - target: {fileID: 737281653019701171, guid: 7cd2e80d1cb65b845943cfedf3455db9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.25
+      value: 1.361
       objectReference: {fileID: 0}
     - target: {fileID: 737281653019701171, guid: 7cd2e80d1cb65b845943cfedf3455db9,
         type: 3}

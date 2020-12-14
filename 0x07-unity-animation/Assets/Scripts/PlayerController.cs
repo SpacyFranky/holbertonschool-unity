@@ -24,11 +24,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         player = GetComponent<CharacterController>();
-
     }
 
     void Update()
     {
+        Debug.Log(player.isGrounded);
         // Setting move direction vector
         float yStore = moveDirection.y;
         moveDirection = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));
