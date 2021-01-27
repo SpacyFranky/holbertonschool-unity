@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class BackgroundMusic : MonoBehaviour
 {
+    AudioSource[] bgAudio;
     AudioSource bgMusic;
+    AudioSource victoryPiano;
     
     // Start is called before the first frame update
     void Start()
     {
-        bgMusic = GetComponent<AudioSource>();
+        bgAudio = GetComponents<AudioSource>();
+        bgMusic = bgAudio[0];
+        victoryPiano = bgAudio[1];
     }
 
     // Update is called once per frame
@@ -21,5 +25,6 @@ public class BackgroundMusic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         bgMusic.Stop();
+        victoryPiano.Play();
     }
 }
